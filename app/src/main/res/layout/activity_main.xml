@@ -11,15 +11,14 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_margin="5dp"
-        custom:circleColor="#ff000000"
+        custom:circleColor="#ffffffff"
         custom:circleLabel="Hello"
-        custom:labelColor="#ff000000"/>
+        custom:labelColor="#ff000000"
+        custom:circleImage="@drawable/android"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="btnPressed"
-        android:text="@string/btn_label" />
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Custom views"
+    android:layout_centerHorizontal="true"/>
 </RelativeLayout>

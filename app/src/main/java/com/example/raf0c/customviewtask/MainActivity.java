@@ -37,9 +37,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void btnPressed(View view) {
-        myView.setCircleColor(Color.WHITE);
-        myView.setLabelColor(Color.BLACK);
-        myView.setLabelText("Image");
+
         myImage.setImageBitmap(icon);
 
     }
