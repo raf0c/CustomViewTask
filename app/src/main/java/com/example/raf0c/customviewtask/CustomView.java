@@ -39,6 +39,27 @@ public class CustomView extends ImageView {
     Canvas drawCanvas;
     private Drawable imageResource;
 
+
+
+    /*
+    *
+    * IMPORTANT:
+    *
+    * References tutorials:
+    *
+    * First part :
+    * http://code.tutsplus.com/tutorials/android-sdk-creating-custom-views--mobile-14548
+    *
+    *Crop Image to circle:
+    * http://www.androidhub4you.com/2014/10/android-custom-shape-imageview-rounded.html
+    *
+    * Center image:
+    * http://stackoverflow.com/questions/8143321/how-to-align-center-a-bitmap
+    *
+    *
+    *
+    * */
+
     public CustomView(Context context, AttributeSet attrs){
         super(context, attrs);
         circlePaint = new Paint();
@@ -130,8 +151,7 @@ public class CustomView extends ImageView {
     public static Bitmap getRoundedCroppedBitmap(Bitmap bitmap, int radius) {
         Bitmap finalBitmap;
         if (bitmap.getWidth() != radius || bitmap.getHeight() != radius)
-            finalBitmap = Bitmap.createScaledBitmap(bitmap, radius, radius,
-                    false);
+            finalBitmap = Bitmap.createScaledBitmap(bitmap, radius, radius, false);
         else
             finalBitmap = bitmap;
         Bitmap output = Bitmap.createBitmap(finalBitmap.getWidth(),
@@ -139,8 +159,7 @@ public class CustomView extends ImageView {
         Canvas canvas = new Canvas(output);
 
         final Paint paint = new Paint();
-        final Rect rect = new Rect(0, 0, finalBitmap.getWidth(),
-                finalBitmap.getHeight());
+        final Rect rect = new Rect(0, 0, finalBitmap.getWidth(), finalBitmap.getHeight());
 
         paint.setAntiAlias(true);
         paint.setFilterBitmap(true);
